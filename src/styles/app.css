@@ -33,6 +33,7 @@
 
 .middleMiddle { 
   grid-area: 2 / 2 / 4 / 3;
+  display: grid;
   background-color: rgb(255, 0, 8);
   border: 2px black; 
 }
