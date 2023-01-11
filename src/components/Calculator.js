@@ -15,8 +15,15 @@ function reducer(state, {type, payload}) {
         ...state,
         score: `${state.score || ""}${payload.number}`
       }
+    case ACTIONS.DELETE_NUMBER:
+      return {
+        ...state,
+        score: state.score.slice(0,-1),
+      }
     case ACTIONS.CLEAR:
       return {}
+    default:
+      {}
   } 
 }
 
@@ -42,7 +49,7 @@ const Calculator = () => {
         <NumberButton number="7" dispatch={dispatch} />
         <NumberButton number="8" dispatch={dispatch} />
         <NumberButton number="9" dispatch={dispatch} />
-        <button className='divDelete'>Delete</button>
+        <button className='divDelete' onClick={() => dispatch({type:ACTIONS.DELETE_NUMBER})}>Delete</button>
         <NumberButton number="0" dispatch={dispatch} />
         <button className='divClear' onClick={() => dispatch({ type:ACTIONS.CLEAR})}>Clear</button>
       </div>
