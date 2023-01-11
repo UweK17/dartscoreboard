@@ -4,7 +4,10 @@ import '../styles/calculator.css';
 const Calculator = () => {
   return (
     <>
-      <div class="parent">
+      <div className='display'>
+        Display
+      </div>
+      <div class="calculatorLayout">
         <div class="div1"> 1</div>
         <div class="div2"> 2</div>
         <div class="div3"> 3</div>
@@ -14,10 +17,11 @@ const Calculator = () => {
         <div class="div7"> 7</div>
         <div class="div8"> 8</div>
         <div class="div9"> 9</div>
-        <div class="div10"> Clear</div>
-        <div class="div11"> 0</div>
-        <div class="div12"> Delete</div>
+        <div class="divClear"> Clear</div>
+        <div class="div0"> 0</div>
+        <div class="divDelete"> Delete</div>
       </div>
+      <button>Submit</button>
     </>
   )
 }
