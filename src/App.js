@@ -1,12 +1,13 @@
 import './styles/app.css';
 import Calculator from './components/Calculator.js';
+import Player1 from './components/Player1.js';
 
 function App() {
   return (
     <>
       <div className="partitionScreen">
-        <div className="topLeft player1">Player 1
-          <div className="player1score">501</div>
+        <div className="topLeft player1">
+          <Player1 />
         </div>
         <div className="bottomLeft player2">Player 2
           <div className="player2score">501</div>

@@ -1,6 +1,7 @@
 import React, {useReducer} from 'react';
 import NumberButton from './NumberButton.js';
 import '../styles/calculator.css';
+import Player1 from './Player1.js';
 
 export const ACTIONS = {
   ADD_NUMBER: 'add-number',
@@ -22,9 +23,21 @@ function reducer(state, {type, payload}) {
       }
     case ACTIONS.CLEAR:
       return {}
+    case ACTIONS.SUBMIT:
+      return {
+        ...state,
+        score: submitScore(state),
+      }
     default:
       {}
   } 
+}
+
+function submitScore({score}) {
+  const currentScore = parseFloat(score)
+  return (
+    <Player1 currentScore={currentScore} />
+  )
 }
 
 const Calculator = () => {
@@ -52,7 +65,7 @@ const Calculator = () => {
         <NumberButton number="0" dispatch={dispatch} />
         <button className='divDelete' onClick={() => dispatch({type:ACTIONS.DELETE_NUMBER})}>Delete</button>
       </div>
-      <button className="scoreSubmit">Submit</button>
+      <button className="scoreSubmit" onClick={() => dispatch({type:ACTIONS.SUBMIT})}>Submit</button>
     </>
   )
 }
