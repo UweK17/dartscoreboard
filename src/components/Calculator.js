@@ -39,7 +39,6 @@ const Calculator = () => {
         {score}
       </div>
       <div className="calculatorLayout">
-        
         <NumberButton number="1" dispatch={dispatch} />
         <NumberButton number="2" dispatch={dispatch} />
         <NumberButton number="3" dispatch={dispatch} />
@@ -49,9 +48,9 @@ const Calculator = () => {
         <NumberButton number="7" dispatch={dispatch} />
         <NumberButton number="8" dispatch={dispatch} />
         <NumberButton number="9" dispatch={dispatch} />
-        <button className='divDelete' onClick={() => dispatch({type:ACTIONS.DELETE_NUMBER})}>Delete</button>
-        <NumberButton number="0" dispatch={dispatch} />
         <button className='divClear' onClick={() => dispatch({ type:ACTIONS.CLEAR})}>Clear</button>
+        <NumberButton number="0" dispatch={dispatch} />
+        <button className='divDelete' onClick={() => dispatch({type:ACTIONS.DELETE_NUMBER})}>Delete</button>
       </div>
       <button className="scoreSubmit">Submit</button>
     </>
