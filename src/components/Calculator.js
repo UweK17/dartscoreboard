@@ -21,7 +21,7 @@ const Calculator = () => {
         <div class="div0"> 0</div>
         <div class="divDelete"> Delete</div>
       </div>
-      <button>Submit</button>
+      <button className="scoreSubmit">Submit</button>
     </>
   )
 }

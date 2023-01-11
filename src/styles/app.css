@@ -32,6 +32,7 @@
 .middleMiddle { 
   grid-area: 2 / 2 / 4 / 3;
   display: grid;
+  grid-template-rows: 15% auto 15%;
   background-color: rgb(255, 0, 8);
 }
 
