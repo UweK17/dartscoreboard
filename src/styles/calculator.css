@@ -36,7 +36,7 @@
 .numpad,
 .divClear,
 .divDelete {
-  background-color: rgb(189, 183, 183);
+  background-color: rgba(189, 183, 183, 0);
   margin: 1px;
   cursor: pointer;
   display: flex;
