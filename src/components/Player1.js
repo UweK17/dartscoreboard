@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 
 
@@ -11,8 +11,7 @@ const Player1 = ({currentScore}) => {
   console.log('currentscore in player1 '+currentScore);
   console.log(typeof currentScore);
 
-  
-const result = parseFloat(player1Score-currentScore)
+  const result = parseFloat(player1Score-currentScore);
   
 
   console.log('ergebnis '+result);
@@ -28,5 +27,4 @@ const result = parseFloat(player1Score-currentScore)
     </>
   )
 }
-
 export default Player1
