@@ -14,14 +14,12 @@ const Player1 = ({currentScore}) => {
   console.log('ergebnis '+result);
   console.log(typeof result);
 
-  
-
-  
+    
   return (
     <>
       <div>Player1</div>
       <div>Startwert: {player1Score}</div>
-      <div className='player1score'>Neuer Wert: {'Neuer Wert: '+ +result}
+      <div className='player1score'>Neuer Wert: {result}
       </div>
     </>
   )
