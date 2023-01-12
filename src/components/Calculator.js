@@ -9,6 +9,7 @@ export const ACTIONS = {
   DELETE_NUMBER: 'delete-number',
   SUBMIT: 'submit'
 }
+
 function reducer(state, {type, payload}) {
   switch(type) {
     case ACTIONS.ADD_NUMBER:
@@ -36,9 +37,7 @@ function reducer(state, {type, payload}) {
 function submitScore({score}) {
   const currentScore = parseFloat(score);
   console.log('currentscore nach parsefloat ' + currentScore);
-  return (
-    <Player1 currentScore={currentScore} />
-  )
+  return currentScore;
 }
 
 const Calculator = () => {
