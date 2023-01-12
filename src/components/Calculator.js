@@ -34,7 +34,8 @@ function reducer(state, {type, payload}) {
 }
 
 function submitScore({score}) {
-  const currentScore = parseFloat(score)
+  const currentScore = parseFloat(score);
+  console.log('currentscore nach parsefloat ' + currentScore);
   return (
     <Player1 currentScore={currentScore} />
   )
