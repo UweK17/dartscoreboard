@@ -40,6 +40,7 @@ function submitScore({score}) {
   currentScore = parseFloat(score);
   console.log('currentscore nach parsefloat ' + currentScore);
   return currentScore;
+  
 }
 
 const Calculator = () => {

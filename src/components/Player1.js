@@ -10,6 +10,7 @@ const Player1 = ({currentScore}) => {
   console.log(typeof currentScore);
 
   const result = parseFloat(player1Score-currentScore);
+
   console.log('ergebnis '+result);
   console.log(typeof result);
 
