@@ -27,4 +27,5 @@ const Player1 = ({currentScore}) => {
     </>
   )
 }
+
 export default Player1
