@@ -34,8 +34,10 @@ function reducer(state, {type, payload}) {
   } 
 }
 
+let currentScore = 0;
+
 function submitScore({score}) {
-  const currentScore = parseFloat(score);
+  currentScore = parseFloat(score);
   console.log('currentscore nach parsefloat ' + currentScore);
   return currentScore;
 }
@@ -48,24 +50,42 @@ const Calculator = () => {
 
   return (
     <>
-      <div className='display'>
-        {score}
+      <div className="partitionScreen">
+        <div className="topLeft player1">
+            <Player1 currentScore={currentScore}/>
+          </div>
+          <div className="bottomLeft player2">Player 2
+            <div className="player2score">501</div>
+          </div>
+          <div className="topMiddle"> 3</div>
+        <div className="middleMiddle">
+          <div className='display'>
+            {score}
+          </div>
+          <div className="calculatorLayout">
+            <NumberButton number="1" dispatch={dispatch} />
+            <NumberButton number="2" dispatch={dispatch} />
+            <NumberButton number="3" dispatch={dispatch} />
+            <NumberButton number="4" dispatch={dispatch} />
+            <NumberButton number="5" dispatch={dispatch} />
+            <NumberButton number="6" dispatch={dispatch} />
+            <NumberButton number="7" dispatch={dispatch} />
+            <NumberButton number="8" dispatch={dispatch} />
+            <NumberButton number="9" dispatch={dispatch} />
+            <button className='divClear' onClick={() => dispatch({ type:ACTIONS.CLEAR})}>Clear</button>
+            <NumberButton number="0" dispatch={dispatch} />
+            <button className='divDelete' onClick={() => dispatch({type:ACTIONS.DELETE_NUMBER})}>Delete</button>
+          </div>
+          <button className="scoreSubmit" onClick={() => dispatch({type:ACTIONS.SUBMIT})}>Submit</button>
+        </div>
+        <div className="bottomMiddle"> 5</div>
+          <div className="topRight player3">Player 3
+            <div className="player3score">501</div>
+          </div>
+          <div className="bottomRight player4">Player 4
+            <div className="player4score">501</div>
+          </div>
       </div>
-      <div className="calculatorLayout">
-        <NumberButton number="1" dispatch={dispatch} />
-        <NumberButton number="2" dispatch={dispatch} />
-        <NumberButton number="3" dispatch={dispatch} />
-        <NumberButton number="4" dispatch={dispatch} />
-        <NumberButton number="5" dispatch={dispatch} />
-        <NumberButton number="6" dispatch={dispatch} />
-        <NumberButton number="7" dispatch={dispatch} />
-        <NumberButton number="8" dispatch={dispatch} />
-        <NumberButton number="9" dispatch={dispatch} />
-        <button className='divClear' onClick={() => dispatch({ type:ACTIONS.CLEAR})}>Clear</button>
-        <NumberButton number="0" dispatch={dispatch} />
-        <button className='divDelete' onClick={() => dispatch({type:ACTIONS.DELETE_NUMBER})}>Delete</button>
-      </div>
-      <button className="scoreSubmit" onClick={() => dispatch({type:ACTIONS.SUBMIT})}>Submit</button>
     </>
   )
 }
