@@ -1,6 +1,6 @@
 import React, {useReducer} from 'react';
 import NumberButton from './NumberButton.js';
-import '../styles/calculator.css';
+import '../styles/numpad.css';
 import Player1 from './Player1.js';
 
 export const ACTIONS = {
