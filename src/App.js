@@ -1,10 +1,10 @@
 import './styles/app.css';
-import Calculator from './components/Calculator.js';
+import Numpad from './components/Numpad.js';
 
 function App() {
   return (
     <>
-      <Calculator />
+      <Numpad />
     </>
   );
 }
