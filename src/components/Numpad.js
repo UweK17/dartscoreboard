@@ -47,14 +47,17 @@ function submitScore({score}) {
 const Calculator = () => {
 
   const [{score}, dispatch] = useReducer(reducer, {});
-
+  const [player1Score, setPlayer1Score] = useState(301);
   
 
   return (
     <>
       <div className="partitionScreen">
         <div className="topLeft player1">
-            <Player1 currentScore={currentScore}/>
+          <div>Player1</div>
+          <div>Startwert: {player1Score}</div>
+          <div className='player1score'>Neuer Wert: {result}
+      </div>
           </div>
           <div className="bottomLeft player2">Player 2
             <div className="player2score">501</div>
