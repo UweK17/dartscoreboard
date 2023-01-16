@@ -2,7 +2,6 @@ import React, {useReducer} from 'react';
 import NumberButton from './NumberButton.js';
 import '../styles/numpad.css';
 import Player1 from './Player1.js';
-import {UserContext, UserContextProvider} from '../context/UserContext.js';
 
 export const ACTIONS = {
   ADD_NUMBER: 'add-number',
@@ -53,7 +52,6 @@ const Calculator = () => {
 
   return (
     <>
-    <UserContextProvider>
       <div className="partitionScreen">
         <div className="topLeft player1">
             <Player1 currentScore={currentScore}/>
@@ -90,7 +88,6 @@ const Calculator = () => {
             <div className="player4score">501</div>
           </div>
       </div>
-      </UserContextProvider>
     </>
   )
 }
