@@ -19,13 +19,13 @@ import { usePlayer1 } from '../context/Player1Context.js';
   // console.log(typeof result);
 
   const {player1Score, setPlayer1Score} = usePlayer1();
-
+  const result = parseFloat(player1Score-currentScore);
     
   return (
     <>
       <div>Player1</div>
       <div>Startwert: {player1Score}</div>
-      <div className='player1score'>Neuer Wert: {currentScore}
+      <div className='player1score'>Neuer Wert: {result}
       </div>
     </>
   )
